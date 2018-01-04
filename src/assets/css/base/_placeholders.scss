@@ -1,0 +1,100 @@
+@font-face {
+  font-family: 'proxima-nova-regular';
+  src: url('../fonts/proxima-nova/Alt-Regular-webfont.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'proxima-nova-light';
+  src: url('../fonts/proxima-nova/Thin-webfont.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'proxima-nova-semi-bold';
+  src: url('../fonts/proxima-nova/Semibold-webfont.ttf') format('truetype')
+}
+
+$deepGreen : #364f54;
+$turquoise: #02bac1;
+$lightGray: #fafafa;
+
+%a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+
+  &:hover{
+    color: white;
+    text-decoration: none;
+  }
+  &:visited, &:focus{
+    color: white;
+    text-decoration: none;
+  }
+}
+%trans{
+  transition: 0.4s;
+}
+%btn-clear{
+  background: white;
+  color: #333;
+  
+  &:hover{
+    border-color: $turquoise;
+  }
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: 'proxima-nova-regular', sans-serif;
+}
+
+// Font sizes
+.bold{
+  font-family: 'proxima-nova-semi-bold', sans-serif;
+}
+.light{
+  font-family: 'proxima-nova-light', sans-serif;
+}
+
+// Margins
+.m-b-sm{
+  margin-bottom: 15px;
+}
+.m-b-md{
+  margin-bottom: 30px;
+}
+.m-l-sm{
+  margin-left: 15px;
+}
+.m-r-md{
+  margin-right: 30px;
+}
+.m-t-md{
+  margin-top: 30px;
+}
+
+// Sitewide classes
+button{
+  @extend %trans;
+  color: white;
+  background: $turquoise;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+
+// Utility classes
+.cancel{
+  @extend %btn-clear;
+}
+.delete{
+  background: crimson;
+}
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}

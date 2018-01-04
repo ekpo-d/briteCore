@@ -1,0 +1,30 @@
+@media screen and (min-width: 1024px){
+}
+@media screen and (max-width: 1280px){
+
+}
+@media screen and (max-width: 1024px){
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 700px){
+  .nav-desktop{
+    .logo{
+      margin-top: 5px;
+    }
+    .links{
+      display: none;
+    }
+    .hamburger{
+      display: inline-block;
+    }
+  }
+  .insurer{
+    .input-wrapper{
+      border-radius: 0;
+    }
+  }
+}
+@media screen and (max-width: 320px){
+}

@@ -1,0 +1,79 @@
+.insurer{
+  padding-top: 75px;
+
+  .wrapper{
+    margin: auto 40px;
+    height: calc(100vh - 100px);
+
+    h1.light{
+      margin: 0 0 10px 0;
+    }
+  }
+  .content-wrapper{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  h2{
+    margin: 30px 0 40px 0;
+  }
+  .field-types{
+    background: $lightGray;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+  }
+  .field-details{
+    border-left: 1px solid lightgray;
+    padding: 0 30px;
+    padding-bottom: 20px;
+  }
+  .field-groups{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background: $lightGray;
+    padding: 0 20px;
+    min-height: 400px;
+  }
+  .tile{
+    @extend %trans;
+    cursor: pointer;
+    background: white;
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    .icon{
+      margin-right: 10px;
+      height: 15px;
+      position: relative;
+      top: -2px;
+    }
+
+    &.active{
+      color: white;
+      background: $turquoise;
+    }
+  
+    &:hover{
+      border-color: $turquoise;
+    }
+  }
+  .btn-turq-group{
+    width: calc(100% + 30px);
+    position: relative;
+    right: 15px;
+  }
+  button.clear{
+    @extend %btn-clear;
+    width: 70%;
+    position: absolute;
+    bottom: 20px;
+  }
+  .label{
+    @extend %btn-clear;
+    cursor: pointer;
+    border: 1px solid $turquoise;
+    padding: 3px 7px;
+    margin-right: 5px;
+  }
+}
