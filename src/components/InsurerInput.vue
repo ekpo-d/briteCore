@@ -45,8 +45,8 @@
                     </div>
                     <div class="form-group m-b-md">
                       <label for="cust-val">Custom Validation</label>
-                      <input type="text" class="form-control" name="custom-validation" id="cust-val">
-                      <p class="small">Any regex can be used for custom input validation</p>
+                      <input type="text" class="form-control" name="custom-validation" id="cust-val" v-model="regex.exp"  @blur="validateRegex(regex.exp)">
+                      <p class="small">{{regex.message}}</p>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -118,6 +118,10 @@ export default {
     return {
       displayName: '',
       refName: '',
+      regex: {
+        exp: '',
+        message: ''
+      },
       defaultValue: 'text',
       fieldTypes: [
         {
@@ -171,6 +175,14 @@ export default {
       this.tagSelected = true
       this.tags = []
       this.tags = this.tagGroups[tagGroupName].slice(0)
+    },
+    validateRegex (expression) {
+      try {
+          new RegExp(expression);
+          this.regex.message = "Any regex can be used for custom input validation";
+      } catch(e) {
+          this.regex.message = "Regex is invalid";
+      }
     }
   }
 }
